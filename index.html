@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14251f">
+  <title>Zita adventi kalendáriuma ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">EGY KIS MEGLEPETÉS NEKED</div>
+      <h1>Zita adventi<br><em>kalendáriuma</em></h1>
+      <p class="intro">Minden napra egy apró meglepetés, emlék vagy üzenet. ❤️</p>
+      <div class="date-line" id="dateLine"></div>
+      <div class="countdown" id="countdown" aria-live="polite"></div>
+    </header>
+
+    <section class="calendar-wrap" aria-label="Adventi kalendárium">
+      <div class="section-heading">
+        <span>DECEMBER</span>
+        <span class="tiny-heart">♥</span>
+        <span>1 — 24</span>
+      </div>
+      <div class="calendar" id="calendar"></div>
+      <p class="hint">Az ajtók a hozzájuk tartozó napon, éjfélkor nyílnak ki. A jövő titkait még őrizzük. ✨</p>
+    </section>
+    <footer>Csak neked készítettem, Zita. <span>♥</span></footer>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Bezárás">×</button>
+      <div class="modal-day" id="modalDay"></div>
+      <h2 id="modalTitle"></h2>
+      <div class="gift-image-wrap" id="imageWrap" hidden><img id="giftImage" alt="A napi meglepetés képe"></div>
+      <p id="modalMessage"></p>
+      <div class="modal-signoff">Szeretettel, neked. ❤️</div>
+    </div>
+  </div>
+  <script src="gifts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
