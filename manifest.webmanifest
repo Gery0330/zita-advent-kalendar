@@ -1,0 +1,17 @@
+{
+  "name": "Zita adventi kalendáriuma",
+  "short_name": "Zita Advent",
+  "description": "Egy kis adventi meglepetés, csak neked.",
+  "lang": "hu",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#34978c",
+  "theme_color": "#14251f",
+  "icons": [
+    { "src": "ikonok/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "ikonok/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "ikonok/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,66 @@
+/* Szerkesztő felület stílusa – minden osztály .zadm előtaggal, hogy ne zavarja az oldalt */
+.zadm{position:fixed;inset:0;z-index:4;background:#050e0bcc;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:2.5vh 2vw;font-family:'DM Sans',sans-serif;color:var(--cream)}
+.zadm[hidden],.zadm [hidden]{display:none!important}
+.zadm *{box-sizing:border-box}
+.zadm-login,.zadm-editor{background:#10231d;border:1px solid rgba(214,183,122,.5);border-radius:14px;box-shadow:0 25px 90px #000a}
+.zadm-login{width:min(380px,100%);padding:32px 28px;text-align:center}
+.zadm-login h2{font-family:'Playfair Display',serif;font-weight:500;font-size:30px;margin:8px 0 20px}
+.zadm-login form{display:grid;gap:12px}
+.zadm-eyebrow{letter-spacing:.24em;font-size:10px;font-weight:700;color:var(--gold)}
+.zadm-editor{width:min(1100px,100%);height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.zadm-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid rgba(214,183,122,.25);flex-wrap:wrap}
+.zadm-status{font-size:12.5px;color:var(--muted);margin-top:4px;max-width:520px;line-height:1.45}
+.zadm-status.warn{color:#f0d594}
+.zadm-head-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.zadm-x{border:0;background:none;color:var(--muted);font-size:30px;line-height:1;cursor:pointer;padding:0 6px}
+.zadm-x:hover{color:var(--cream)}
+.zadm-body{flex:1;display:grid;grid-template-columns:230px 1fr;min-height:0}
+.zadm-list{overflow:auto;border-right:1px solid rgba(214,183,122,.2);padding:10px;display:flex;flex-direction:column;gap:3px}
+.zadm-list button{display:flex;align-items:center;gap:6px;text-align:left;background:none;border:1px solid transparent;color:#d3ded5;font:inherit;font-size:13.5px;padding:8px 10px;border-radius:8px;cursor:pointer}
+.zadm-list button b{color:var(--gold);min-width:22px;font-weight:600}
+.zadm-list button span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.zadm-list button i{font-style:normal;font-size:11px;color:var(--gold)}
+.zadm-list button:hover{background:#ffffff0d}
+.zadm-list button.on{background:#d6b77a22;border-color:rgba(214,183,122,.55);color:#fff}
+.zadm-main{overflow:auto;padding:20px 24px 30px;display:flex;flex-direction:column;gap:14px}
+.zadm-main h3,.zadm-sub-card h3{font-family:'Playfair Display',serif;font-weight:500;font-size:24px;margin:0}
+.zadm-day{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.22em}
+.zadm-f{display:grid;gap:6px}
+.zadm-f>span,.zadm-photos-head>span{font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.04em}
+.zadm-photos-head small{font-weight:400;color:var(--muted);letter-spacing:0}
+.zadm input,.zadm textarea{width:100%;font:inherit;font-size:14.5px;color:var(--cream);background:#0a1713;border:1px solid rgba(214,183,122,.35);border-radius:8px;padding:10px 12px;line-height:1.55}
+.zadm textarea{resize:vertical}
+.zadm input::placeholder,.zadm textarea::placeholder{color:#7f9488}
+.zadm input:focus,.zadm textarea:focus,.zadm button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.zadm-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.zadm-btn{font:inherit;font-size:13px;font-weight:600;color:var(--cream);background:#ffffff10;border:1px solid rgba(214,183,122,.4);border-radius:999px;padding:8px 15px;cursor:pointer;white-space:nowrap}
+.zadm-btn:hover{background:#ffffff1c}
+.zadm-btn.primary{background:var(--gold);color:#14251f;border-color:var(--gold)}
+.zadm-btn.primary:hover{filter:brightness(1.08)}
+.zadm-btn:disabled{opacity:.5;cursor:not-allowed}
+.zadm-link{background:none;border:0;color:var(--muted);font:inherit;font-size:13px;margin-top:14px;cursor:pointer;text-decoration:underline}
+.zadm-row-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.zadm-photos-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px}
+.zadm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.zadm-ph{position:relative;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:#0a1713;cursor:pointer;aspect-ratio:1;color:var(--cream)}
+.zadm-ph img{width:100%;height:100%;object-fit:cover;display:block;opacity:.72;transition:opacity .15s}
+.zadm-ph:hover img{opacity:1}
+.zadm-ph small{position:absolute;left:0;right:0;bottom:0;padding:14px 6px 4px;font-size:10.5px;text-align:left;background:linear-gradient(transparent,#000c);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.zadm-ph.on{border-color:var(--gold)}
+.zadm-ph.on img{opacity:1}
+.zadm-n{position:absolute;top:6px;left:6px;min-width:22px;height:22px;border-radius:999px;background:var(--gold);color:#14251f;font-size:12px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 6px}
+.zadm-ph.on .zadm-n{display:flex}
+.zadm-ph.missing img{visibility:hidden}
+.zadm-ph.missing::after{content:"nincs a mappában";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f0b0ac;text-align:center;padding:6px}
+.zadm-empty,.zadm-note{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.zadm-empty{grid-column:1/-1;border:1px dashed rgba(214,183,122,.4);border-radius:10px;padding:16px}
+.zadm-err{min-height:18px;margin:0;color:#f0b0ac;font-size:13px}
+.zadm-sub{position:absolute;inset:0;background:#050e0bd9;display:flex;align-items:center;justify-content:center;padding:20px;z-index:2}
+.zadm-sub-card{width:min(420px,100%);background:#10231d;border:1px solid rgba(214,183,122,.5);border-radius:12px;padding:24px;display:grid;gap:12px}
+@media(max-width:760px){
+  .zadm{padding:0}.zadm-editor{border-radius:0}
+  .zadm-body{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .zadm-list{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid rgba(214,183,122,.2)}
+  .zadm-list button{flex:none;max-width:160px}
+  .zadm-two{grid-template-columns:1fr}
+}
